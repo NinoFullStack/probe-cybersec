@@ -50,18 +50,6 @@ export const useLogging = cybersec_block => {
     removeItemStorage('error')
   }
 
-  const end = e => {
-    e.preventDefault()
-    const { btn_end_id } = e.target.dataset
-    log({
-      type: 'SYSTEM',
-      action: 'session_finished',
-      cybersec_block,
-      btn_end_id,
-    })
-    localStorage.setItem('end', true)
-  }
-
   const cancel = () => {
     log({ type: 'ROI', action: 'user_canceled_probe', cybersec_block })
   }
@@ -85,6 +73,19 @@ export const useLogging = cybersec_block => {
     })
 
     removeItemStorage('error')
+  }
+
+  const end = e => {
+    e.preventDefault()
+    nextBlock(e)
+    const { btn_end_id } = e.target.dataset
+    log({
+      type: 'SYSTEM',
+      action: 'session_finished',
+      cybersec_block,
+      btn_end_id,
+    })
+    localStorage.setItem('end', true)
   }
 
   const restored = () => {
