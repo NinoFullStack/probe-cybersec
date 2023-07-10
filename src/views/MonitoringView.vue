@@ -18,7 +18,7 @@ onMounted(() => {
 <template>
   <section class="main__desk desk desk_stage2">
     <div class="desk__container">
-      <div class="desk__wrapper" style="height: auto">
+      <div class="desk__wrapper">
         <div
           class="desk-head desk__part"
           data-aos="fade-up"

@@ -63,14 +63,13 @@ const media = inject('media')
         }}
       </p>
     </div>
-    <a
-      href=""
+    <button
       data-btn_next_id="next-btn-2"
       class="popup-finished__button"
       @click=";[nextBlock($event), emit('next')]"
     >
       <!-- :to="{ name: 'neutralization' }" -->
       {{ translate('Далее') }}
-    </a>
+    </button>
   </div>
 </template>

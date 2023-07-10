@@ -1018,7 +1018,7 @@ h3 {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   gap: 16px;
-  height: 100%;
+  height: auto;
   -ms-grid-columns: 270px 16px auto 16px 280px;
   grid-template-columns: 270px auto 280px;
   -ms-grid-rows: auto 16px 1fr;

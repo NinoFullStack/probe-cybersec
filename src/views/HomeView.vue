@@ -55,8 +55,7 @@ const media = inject('media')
           data-aos-duration="800"
           data-aos-delay="800"
         >
-          <a
-            href=""
+          <button
             data-btn_next_id="next-btn-1"
             class="welcome-button button"
             @click=";[start($event), $emit('next')]"
@@ -65,7 +64,7 @@ const media = inject('media')
               translate('Приступить')
             }}</span>
             <img :src="media('src/assets/img/icons/arrow-right.svg')" alt="" />
-          </a>
+          </button>
         </div>
       </div>
     </div>
