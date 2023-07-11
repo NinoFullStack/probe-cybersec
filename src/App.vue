@@ -51,29 +51,31 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="wrapper" :class="{ 'full-height': counter !== 0 }">
-    <main class="main">
-      <component
-        :is="views[counter]"
-        :cybersec_block="counter"
+  <div id="cybersec">
+    <div class="wrapper" :class="{ 'full-height': counter !== 0 }">
+      <main class="main">
+        <component
+          :is="views[counter]"
+          :cybersec_block="counter"
+          @next="nextBlock"
+        />
+      </main>
+
+      <AdminPanelModals
+        v-if="counter === 1"
+        cybersec_block="1"
         @next="nextBlock"
       />
-    </main>
-
-    <AdminPanelModals
-      v-if="counter === 1"
-      cybersec_block="1"
-      @next="nextBlock"
-    />
-    <NeutralizationModals
-      v-if="counter === 2"
-      cybersec_block="2"
-      @next="nextBlock"
-    />
-    <MonitoringModals
-      v-if="counter === 3"
-      cybersec_block="3"
-      @next="nextBlock"
-    />
+      <NeutralizationModals
+        v-if="counter === 2"
+        cybersec_block="2"
+        @next="nextBlock"
+      />
+      <MonitoringModals
+        v-if="counter === 3"
+        cybersec_block="3"
+        @next="nextBlock"
+      />
+    </div>
   </div>
 </template>
